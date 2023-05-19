@@ -1,0 +1,9 @@
+profile: local
+
+application.name: yosep-mvc-boiler-plate-java
+
+server:
+  port: 10000
+  logging:
+    access: true
+  shutdown: graceful
