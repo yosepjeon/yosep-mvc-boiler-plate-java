@@ -1,6 +1,7 @@
 package com.yosep.server.common.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,23 @@ public class DataParser {
 	public <T, R> R parse(T data, Class<R> clazz) {
 		return objectMapper.convertValue(data, clazz);
 	}
+
+	public <R> R parse(String data, TypeReference<R> clazz) {
+		try {
+			return objectMapper.readValue(data, clazz);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public <R> R parse(String data, Class<R> clazz) {
+		try {
+			return objectMapper.readValue(data, clazz);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 
 	public <T> byte[] parse(T data) {
 		try {
