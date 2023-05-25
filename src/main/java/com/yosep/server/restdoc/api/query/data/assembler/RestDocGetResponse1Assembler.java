@@ -1,5 +1,8 @@
 package com.yosep.server.restdoc.api.query.data.assembler;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+
+import com.yosep.server.restdoc.api.query.RestDocQueryController;
 import com.yosep.server.restdoc.api.query.data.response.RestDocGetResponse1;
 import com.yosep.server.restdoc.application.query.data.dto.RestDocGetDto1;
 import org.springframework.hateoas.CollectionModel;
@@ -12,7 +15,7 @@ public class RestDocGetResponse1Assembler implements RepresentationModelAssemble
 
 	@Override
 	public EntityModel<RestDocGetResponse1> toModel(RestDocGetDto1 entity) {
-		return EntityModel.of(RestDocGetResponse1.from(entity));
+		return EntityModel.of(RestDocGetResponse1.from(entity)).add(linkTo(RestDocQueryController.class).withSelfRel());
 	}
 
 	@Override

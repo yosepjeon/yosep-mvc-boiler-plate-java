@@ -5,7 +5,6 @@ import com.yosep.server.restdoc.api.query.data.assembler.RestDocGetResponse1Asse
 import com.yosep.server.restdoc.api.query.data.response.RestDocGetResponse1;
 import com.yosep.server.restdoc.application.query.service.RestDocQueryService;
 import lombok.RequiredArgsConstructor;
-import org.json.simple.JSONObject;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +23,10 @@ public class RestDocQueryController {
 	private final DataParser dataParser;
 
 	@GetMapping(value = "/credit-api")
-	public ResponseEntity<JSONObject> get1(@RequestParam("id") String id) {
+	public ResponseEntity<EntityModel<RestDocGetResponse1>> get1(@RequestParam("id") String id) {
 		EntityModel<RestDocGetResponse1> restDocGetResponse1 = restDocGetResponse1Assembler.toModel(restDocQueryService.method1(id));
 
-		return ResponseEntity.ok(dataParser.convertData(restDocGetResponse1, JSONObject.class));
+		return ResponseEntity.ok(restDocGetResponse1);
 	}
 
 }
