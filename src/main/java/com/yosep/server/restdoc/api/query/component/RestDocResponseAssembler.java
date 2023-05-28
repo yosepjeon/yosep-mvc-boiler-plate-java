@@ -1,9 +1,10 @@
-package com.yosep.server.restdoc.api.command.component;
+package com.yosep.server.restdoc.api.query.component;
 
 import com.yosep.server.restdoc.api.command.data.response.RestDocPostResponse1;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
+import org.springframework.lang.NonNullApi;
 import org.springframework.stereotype.Component;
 
 @Component
