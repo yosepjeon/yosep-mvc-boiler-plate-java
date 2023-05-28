@@ -1,6 +1,5 @@
 package com.yosep.server.restdoc.api.query;
 
-import com.yosep.server.common.util.DataParser;
 import com.yosep.server.restdoc.api.query.data.assembler.RestDocGetResponse1Assembler;
 import com.yosep.server.restdoc.api.query.data.response.RestDocGetResponse1;
 import com.yosep.server.restdoc.application.query.service.RestDocQueryService;
@@ -20,13 +19,10 @@ public class RestDocQueryController {
 	private final RestDocQueryService restDocQueryService;
 
 	private final RestDocGetResponse1Assembler restDocGetResponse1Assembler;
-	private final DataParser dataParser;
 
 	@GetMapping(value = "/credit-api")
 	public ResponseEntity<EntityModel<RestDocGetResponse1>> get1(@RequestParam("id") String id) {
-		EntityModel<RestDocGetResponse1> restDocGetResponse1 = restDocGetResponse1Assembler.toModel(restDocQueryService.method1(id));
-
-		return ResponseEntity.ok(restDocGetResponse1);
+		return ResponseEntity.ok(restDocGetResponse1Assembler.toModel(restDocQueryService.method1(id)));
 	}
 
 }
