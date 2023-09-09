@@ -1,4 +1,4 @@
-package com.yosep.server.jpa.dao.jpa.read.repository;
+package com.yosep.server.database.dao.jpa.read.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
