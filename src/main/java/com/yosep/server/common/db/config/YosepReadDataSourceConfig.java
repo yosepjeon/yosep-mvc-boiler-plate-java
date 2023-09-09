@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 	entityManagerFactoryRef = "yosepReadEntityManager",
 	transactionManagerRef = "yosepReadTransactionManager",
 	basePackages = {
-		"com.yosep.server.jpa.dao.jpa.read.*"
+		"com.yosep.server.jpa.dao.mysql.jpa.read.*"
 	}
 )
 public class YosepReadDataSourceConfig {
