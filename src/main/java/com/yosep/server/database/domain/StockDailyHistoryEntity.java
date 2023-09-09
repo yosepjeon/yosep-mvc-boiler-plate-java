@@ -1,4 +1,4 @@
-package com.yosep.server.jpa.domain;
+package com.yosep.server.database.domain;
 
 import com.yosep.server.common.db.domain.BaseEntity;
 import jakarta.persistence.Column;

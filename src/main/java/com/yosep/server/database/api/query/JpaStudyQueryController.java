@@ -1,4 +1,4 @@
-package com.yosep.server.jpa.api.query;
+package com.yosep.server.database.api.query;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;

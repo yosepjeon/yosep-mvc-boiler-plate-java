@@ -1,6 +1,6 @@
-package com.yosep.server.jpa.dao.mysql.jpa.read.repository;
+package com.yosep.server.database.dao.mysql.jpa.read.repository;
 
-import com.yosep.server.jpa.domain.StockDailyHistoryEntity;
+import com.yosep.server.database.domain.StockDailyHistoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

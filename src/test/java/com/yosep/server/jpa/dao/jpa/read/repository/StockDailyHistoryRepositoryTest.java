@@ -2,8 +2,8 @@ package com.yosep.server.jpa.dao.jpa.read.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.yosep.server.jpa.dao.mysql.jpa.read.repository.StockDailyHistoryRepository;
-import com.yosep.server.jpa.domain.StockDailyHistoryEntity;
+import com.yosep.server.database.dao.mysql.jpa.read.repository.StockDailyHistoryRepository;
+import com.yosep.server.database.domain.StockDailyHistoryEntity;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
