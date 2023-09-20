@@ -36,8 +36,8 @@ spring:
       username: SA
       password:
 
-  sql:
-    init:
-      mode: embedded
-      schema-locations: classpath*:sql/h2-table-create.sql
-      data-locations: classpath*:sql/h2-data-insert.sql
+#  sql:
+#    init:
+#      mode: embedded
+#      schema-locations: classpath*:sql/h2-table-create.sql
+#      data-locations: classpath*:sql/h2-dat  a-insert.sql
